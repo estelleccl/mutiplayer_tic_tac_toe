@@ -1,0 +1,34 @@
+<div class="container">
+  <%= erb :_nav_bar %>
+</div>
+
+<div class="show_board">
+</div>
+
+<script>
+$(document).ready(function()
+{ 
+  setTimeout(function()
+  {
+    refresh_board();
+  }, 2000);
+
+  function refresh_board()
+  {
+    console.log("test2")
+    $.ajax(
+    {
+      url:'/available_room',
+      type: "GET",
+      success:function(result)
+      {
+        $(".show_available_room").html(result);
+      },
+      error: function(jqXHR, textStatus, errorThrown) 
+      {
+
+      }
+    });
+  };
+});
+</script>

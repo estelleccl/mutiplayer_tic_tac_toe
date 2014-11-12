@@ -1,0 +1,10 @@
+  <br>
+  <a href="/"><input class="mybutton1" type="submit" value="Home"></a>
+  <% if login? %>
+  <a href="/create_room"><input class="mybutton1" type="submit" value="Create A Room"></a>
+    <a href="/logout"><input class="mybutton2" type="submit" value="Logout"></a>
+    <div class="welcome_msg"><%= username.capitalize %>&nbsp;</div>
+  <% else %>
+  	<a href='/signup_and_login'><input class="mybutton2" type="submit" value="SignUp/Login"></a>
+  <% end %>
+  <br>

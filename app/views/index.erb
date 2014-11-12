@@ -1,0 +1,22 @@
+<div class="container">
+  <%= erb :_nav_bar %>
+</div>
+
+<div class="container">
+	<br>
+  <h1>Welcome to MaGIC Tic Tac Toe Tournament!</h1>
+  
+</div>
+
+<% if login? %>
+	<div class="container"><br>
+		<h3><p>Available Room</p></h3>
+	  <div class="show_available_room">
+	  		<% unless @error_message.nil? %>
+				  <br><p style="color:red; font-style:italic;">
+				  <%= @error_message%></p>
+				<% end %>
+		</div>
+	</div>
+<% end %>
+

@@ -1,0 +1,43 @@
+<% unless @game.nil? %>
+	
+	<div class="container1">
+		<h1>Room Name: <%= @game.room_name %></h1>
+	</div>
+
+	<div id="game-wrap">
+		
+		<div class="row">
+			<div class="col"></div>
+			<div class="col"></div>
+			<div class="col"></div>
+		</div>
+
+		<div class="row">
+			<div class="col"></div>
+			<div class="col"></div>
+			<div class="col"></div>
+		</div>
+
+		<div class="row">
+			<div class="col"></div>
+			<div class="col"></div>
+			<div class="col"></div>
+		</div>
+
+	</div>
+
+	<div id="panel">
+		<input type="text" id="player-1-inp" value="<%= @game.players.find(@game.player1_id).username %>" disabled>
+		<input type="text" id="player-2-inp" value="<%= @game.players.find(@game.player2_id).username unless @game.player2_id.nil?  %>" disabled>
+		<button id="playButton">Play!</button>
+		<h1 id="board"></h1>
+	</div>
+
+
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
+
+<% end %>

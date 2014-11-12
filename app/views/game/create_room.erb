@@ -1,0 +1,12 @@
+<div class="container">
+  <%= erb :_nav_bar %>
+</div>
+
+<div class="container">
+  <br><body bgcolor="#ffffff" alink="#0000be"><b><h3>Create a Room</h3></b><br>
+  <form method="post" action="/create_room"><input type="hidden" name="player1_id" value="<%= @player.id %>">
+    <table border="0"><tr><td>Room Name:&nbsp;</td><td><input type="text" name="room_name" size="30" autocorrect="off" autocapitalize="off"></td></tr></table><br>
+    <input class="mybutton1" type="submit" value="Start"><br>
+  </form>
+</body>
+</div>

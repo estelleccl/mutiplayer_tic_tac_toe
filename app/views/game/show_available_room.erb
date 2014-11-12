@@ -1,0 +1,15 @@
+<% unless @available_room.nil? %><br>
+	<% @available_room.each do |room| %>
+		<div class="container1">
+			<br>
+			<p>Room ID: <%= room.id %></p><br>
+			<p>Room Name: <%= room.room_name.capitalize %></p><br>
+			<p>Player 1: <%= room.players.find(room.player1_id).username %></p><br>
+			<% unless room.player2_id.nil? %>
+				<p>Player 2 <%= room.players.find(room.player2_id).username %></p><br>
+			<% end %>
+			<a href="/game/<%=room.id%>"><input class="mybutton2" type="submit" value="Let's Start Playing"></a>
+			<a href="/room/<%=room.id%>"><input class="mybutton1" type="submit" value="View"></a><br>
+		</div><br>
+	<% end %>
+<% end %>
